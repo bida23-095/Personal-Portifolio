@@ -1,7 +1,8 @@
 # Personal-Portifolio
-<!DOCTYPE html>
 <head>
+    <meta charset="UTF-8">
     <title>Keneilwe Wame Oduetse | Data Analytics Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 

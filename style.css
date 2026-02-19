@@ -1,15 +1,16 @@
-/* ==============================
-   GLOBAL DESIGN SYSTEM
-============================== */
+/* =========================
+   DESIGN SYSTEM
+========================= */
 
 :root {
-    --primary: #f8b6c6;
-    --primary-soft: #ffe4ec;
-    --accent: #ff8fab;
+    --pink-main: #f8b6c6;
+    --pink-soft: #ffe4ec;
+    --pink-accent: #ff8fab;
     --dark: #2c2c2c;
-    --glass: rgba(255, 255, 255, 0.6);
+    --white: #ffffff;
 }
 
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -23,200 +24,15 @@ body {
     scroll-behavior: smooth;
 }
 
-/* ==============================
-   HEADER (Hero Section)
-============================== */
+/* =========================
+   HERO SECTION
+========================= */
 
-header {
-    padding: 80px 20px;
-    text-align: center;
-    background: linear-gradient(135deg, var(--primary), var(--accent));
-    color: white;
-    position: relative;
-    overflow: hidden;
-}
-
-header h1 {
-    font-size: 3rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-header p {
-    margin-top: 10px;
-    font-weight: 300;
-    font-size: 1.2rem;
-    opacity: 0.9;
-}
-
-/* Navigation */
-
-nav {
-    margin-top: 20px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: 400;
-    position: relative;
-    transition: 0.3s ease;
-}
-
-nav a::after {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color: white;
-    transition: 0.3s ease;
-}
-
-nav a:hover::after {
-    width: 100%;
-}
-
-/* ==============================
-   SECTIONS
-============================== */
-
-section {
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 80px 10%;
-    animation: fadeUp 1s ease;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2rem;
-    font-weight: 600;
-    position: relative;
-}
-
-h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: var(--accent);
-    margin: 10px auto 0;
-    border-radius: 10px;
-}
-
-/* ==============================
-   PROFILE IMAGE
-============================== */
-
-.about-image {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.about-image img {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 6px solid white;
-    box-shadow: 0 15px 40px rgba(255, 143, 171, 0.4);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.about-image img:hover {
-    transform: scale(1.08) rotate(2deg);
-    box-shadow: 0 20px 60px rgba(255, 143, 171, 0.6);
-}
-
-/* ==============================
-   GLASS CARDS
-============================== */
-
-article, ul {
-    background: var(--glass);
-    backdrop-filter: blur(15px);
-    border-radius: 20px;
-    padding: 25px;
-    margin: 20px auto;
-    max-width: 800px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-article:hover,
-ul:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(255, 143, 171, 0.2);
-}
-
-/* Skill List Styling */
-
-ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-}
-
-li {
-    background: var(--primary-soft);
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 0.9rem;
-    transition: 0.3s ease;
-}
-
-li:hover {
-    background: var(--accent);
-    color: white;
-}
-
-/* ==============================
-   CONTACT
-============================== */
-
-#contact p {
-    text-align: center;
-    margin: 10px 0;
-}
-
-#contact a {
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 500;
-}
-
-#contact a:hover {
-    text-decoration: underline;
-}
-
-/* ==============================
-   FOOTER
-============================== */
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: var(--primary);
-    color: white;
-    margin-top: 40px;
-}
-
-/* ==============================
-   ANIMATION
-============================== */
-
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+    background: linear-gradient(135deg, var(--pink-main), var(--pink-accent));
+    color: var(--white);
+    flex-wrap: wr
